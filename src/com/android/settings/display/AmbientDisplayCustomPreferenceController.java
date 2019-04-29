@@ -18,7 +18,7 @@ package com.android.settings.display;
 import android.content.Context;
 import android.support.v7.preference.Preference;
 
-import com.android.internal.util.gzosp.GzospUtils;
+import com.android.internal.util.xperia.XperiaUtils;
 
 import com.android.settings.R;
 import com.android.settings.core.PreferenceControllerMixin;
@@ -46,6 +46,6 @@ public class AmbientDisplayCustomPreferenceController extends AbstractPreference
 
     @Override
     public boolean isAvailable() {
-        return GzospUtils.isPackageInstalled(mContext.getApplicationContext(), PACKAGE_CUSTOM_DOZE);
+        return XperiaUtils.isPackageInstalled(mContext.getApplicationContext(), PACKAGE_CUSTOM_DOZE);
     }
 }
